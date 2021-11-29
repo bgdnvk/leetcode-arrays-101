@@ -1,4 +1,6 @@
 //https://leetcode.com/explore/learn/card/fun-with-arrays/523/conclusion/3231/
+//https://leetcode.com/problems/third-maximum-number/
+// Given an integer array nums, return the third distinct maximum number in this array. If the third maximum does not exist, return the maximum number.
 /**
  * @param {number[]} nums
  * @return {number}
