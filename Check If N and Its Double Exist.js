@@ -1,29 +1,26 @@
 //https://leetcode.com/explore/learn/card/fun-with-arrays/527/searching-for-items-in-an-array/3250/
+//https://leetcode.com/problems/check-if-n-and-its-double-exist/
+//Given an array arr of integers, check if there exists two integers N and M such that N is the double of M ( i.e. N = 2 * M).
 /**
  * @param {number[]} arr
  * @return {boolean}
  */
  var checkIfExist = function(arr) {
+    //make a flag to check if there is a double
+    //update it if it exists
     let res = false;
     console.log(`arr is ${arr}`);
+    //use forEach to iterate through all the elements in the array
     arr.forEach( (e, i) => {
-        console.log("i is "+i);
-        console.log('e is '+e)
-        console.log("index of res: "+arr.indexOf(e*2));
-        //check if the double of e exists in the array
+        //check if the double of e exists in the array with indexOf
         if(arr.indexOf(e*2) !== -1){
-            console.log('inside arr index loop');
-            console.log('e*2 is '+e*2);
-            console.log(arr.indexOf(e*2))
             //check we are not iterating over the same element
             if(arr.lastIndexOf(e*2) !== arr.indexOf(arr[i])){
                 res = true
             }
-            console.log('end arr index loop');
             }
         }
     )
-    console.log(res);
     return res
 };
 
